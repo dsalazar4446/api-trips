@@ -21,7 +21,7 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "seed": "node dist/seeder",
     "seed:refresh": "node dist/seeder --refresh",
-    "docker": "npm run prebuild && npm run build && docker build --tag trip-api . && docker rm -f trip-api && docker run -d --env-file \".env\" -p 3000:3000 --add-host localhost:127.0.0.1 --name trip-api trip-api"
+    "docker": "docker-compose up -d --build"
 
   },
   "dependencies": {
